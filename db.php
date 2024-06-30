@@ -4,7 +4,7 @@ $host = getenv('DB_HOST');
 $port = getenv('DB_PORT');
 $username = getenv('DB_USER');
 $password = getenv('DB_PASSWORD');
-$database = getenv('DB_NAME');
+$database = getenv('DB_NAME');   // 'login_crud' db name
 
 $host_with_port = $host . ':' . $port;
 
