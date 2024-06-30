@@ -1,12 +1,17 @@
 <?php
 //server with default setting (user 'root' with no password)
-$host = '172.17.0.3';  // server 
-$user = 'root';   
-$pass = "root@123";   
-$database = 'login_crud';   //Database Name  
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
+$database = getenv('DB_NAME');
+
+$host_with_port = $host . ':' . $port;
 
 // establishing connection
-  $conn = mysqli_connect($host,$user,$pass,$database);   
+$conn = mysqli_connect($host_with_port, $username, $password, $database);
+
+      
 
  // for displaying an error msg in case the connection is not established
   if (!$conn) {                                             
