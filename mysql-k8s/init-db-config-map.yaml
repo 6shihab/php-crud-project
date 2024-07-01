@@ -31,4 +31,3 @@ data:
 kind: ConfigMap
 metadata:
   name: init-db-config-map
-  namespace: my-database
