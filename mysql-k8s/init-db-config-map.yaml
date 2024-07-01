@@ -1,4 +1,8 @@
-CREATE DATABASE IF NOT EXISTS login_crud;
+apiVersion: v1
+data:
+  init.sql: |
+
+    CREATE DATABASE IF NOT EXISTS login_crud;
 
 
     USE login_crud;
@@ -22,4 +26,9 @@ CREATE DATABASE IF NOT EXISTS login_crud;
 
     ALTER TABLE `users`
       MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+    
 
+kind: ConfigMap
+metadata:
+  name: init-db-config-map
+  namespace: my-database

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-crud
+  namespace: my-database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: php-crud
+  template:
+    metadata:
+      labels:
+        app: php-crud
+    spec:
+      containers:
+        - name: php-crud
+          image: 6shihab/php-crud
+          ports:
+            - containerPort: 80
+          env:
+            - name: DB_HOST
+              value: mysql-svc
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_NAME
+              value: login_crud
+            - name: DB_USER
+              value: "root"
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: mysql-root-password
+
