@@ -91,7 +91,7 @@ local Kubernetes cluster (local port 80). The SSH command
 used was:
 ```
 ```
-SSH -i login-key.pem -R 8181:localhost:80 ubuntu@32.64.126.104
+SSH -i login-key.pem -R 8181:localhost:80 ubuntu@34.252.67.38
 ```
 ```
 ● Purpose: This tunneling allowed external traffic from the
@@ -206,7 +206,8 @@ providing CRUD functionality backed by a MySQL database.
 ```
 
 ## Outcome
-
+<kbd>![image](https://github.com/6shihab/php-crud-project/blob/ade8dad58132d0337be0ba1d0da337b4e5800109/.readme-asset/Outcome-1.png)</kbd>
+<kbd>![image](https://github.com/6shihab/php-crud-project/blob/ade8dad58132d0337be0ba1d0da337b4e5800109/.readme-asset/Outcome-2.png)</kbd>
 
 ## Conclusion
 
