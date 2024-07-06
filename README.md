@@ -1,4 +1,4 @@
-# Project Title: Secure and Scalable DevOps Setup with AWS, Nginx, Docker and Kubernetes
+# Secure and Scalable DevOps Setup with AWS, Nginx, Docker and Kubernetes
 
 ## Project Overview
 
