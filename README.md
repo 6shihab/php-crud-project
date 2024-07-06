@@ -37,9 +37,6 @@ running the PHP CRUD application.
 ● PHP: Programming language used for the CRUD application.
 ● MySQL: Relational database management system for storing
 user data.
-```
-
-```
 ● MetalLB: Load balancer implementation for Kubernetes to
 expose services.
 ● GitHub: Version control and source code management.
@@ -49,34 +46,21 @@ expose services.
 ### https://github.com/6shihab/php-crud-project.git
 
 # Traffic Flow
-
+<kbd>![image](https://github.com/6shihab/php-crud-project/blob/7f06ab12aecda88bedf31efe0eeed04e63e3e498/.readme-asset/nginx-reverse-proxy-ssh-tunel-ingress%20(1).jpg)</kbd>
 ```
-1.A user accesses the
-EC2 instance's web
+1.A user accesses the EC2 instance's web
 address.
-2.Traffic is received
-by the Nginx proxy
-server, which uses SSL to
-secure the connection.
-3.Nginx forwards the
-traffic to localhost port
-8181.
-4.The traffic is
-tunneled to the
-on-premises MetalLB load
+2.Traffic is received by the Nginx proxy
+server, which uses SSL to secure the connection.
+3.Nginx forwards the traffic to localhost port 8181.
+4.The traffic is tunneled to the on-premises MetalLB load
 balancer.
-5.The ingress resource
-routes the traffic to the
-PHP CRUD application
-service.
-6.The service directs
-the traffic to the
-appropriate pod running
-the PHP CRUD application.
-7.The PHP CRUD
-application interacts
-with the MySQL server to
-perform CRUD operations.
+5.The ingress resource routes the traffic to the
+PHP CRUD application service.
+6.The service directs the traffic to the
+appropriate pod running the PHP CRUD application.
+7.The PHP CRUD application interacts
+with the MySQL server to perform CRUD operations.
 ```
 
 ## Architecture and Components
@@ -107,7 +91,7 @@ local Kubernetes cluster (local port 80). The SSH command
 used was:
 ```
 ```
-SSH -i login-key.pem -R 8181:localhost:80 ubuntu@32.64.126.
+SSH -i login-key.pem -R 8181:localhost:80 ubuntu@32.64.126.104
 ```
 ```
 ● Purpose: This tunneling allowed external traffic from the
