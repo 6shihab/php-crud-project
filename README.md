@@ -1,4 +1,4 @@
-## Project Title: Secure and Scalable DevOps Setup with AWS, Nginx, Docker and Kubernetes
+# Project Title: Secure and Scalable DevOps Setup with AWS, Nginx, Docker and Kubernetes
 
 ## Project Overview
 
@@ -41,9 +41,6 @@ user data.
 expose services.
 ● GitHub: Version control and source code management.
 ```
-## GitHub Repository:
-
-### https://github.com/6shihab/php-crud-project.git
 
 # Traffic Flow
 <kbd>![image](https://github.com/6shihab/php-crud-project/blob/7f06ab12aecda88bedf31efe0eeed04e63e3e498/.readme-asset/nginx-reverse-proxy-ssh-tunel-ingress%20(1).jpg)</kbd>
