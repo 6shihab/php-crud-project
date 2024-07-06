@@ -1,6 +1,6 @@
 # Secure and Scalable DevOps Setup with AWS, Nginx, Docker and Kubernetes
 
-## Project Overview
+## Overview
 
 In this DevOps project, I configured an AWS EC2 instance with an
 Nginx proxy server secured by an SSL certificate from ZeroSSL.
@@ -10,7 +10,7 @@ traffic to a PHP CRUD application service, which in turn directs
 it to the application pods. Additionally, a MySQL server runs in
 the background, supporting the PHP CRUD application.
 
-## Project Objectives
+## Objectives
 
 The primary goal of the project was to set up a web application
 environment where users can interact with a PHP CRUD application
@@ -100,14 +100,14 @@ Kubernetes cluster running the PHP CRUD application.
 ### ● Kubernetes Deployment:
 
 ```
-○ MySQL Server: A MySQL server was deployed using the
+● MySQL Server: A MySQL server was deployed using the
 mysql:5.7 base image. It was configured with a
 persistent volume to store database data and
 initialized with an init.sql script to set up the
 database schema.
 ```
 ```
-○ PHP CRUD Application: A Docker container for the PHP
+● PHP CRUD Application: A Docker container for the PHP
 CRUD application was created using a Dockerfile based
 on the php:8.1-apache image. The application allows
 users to manage a users table with fields for
@@ -117,15 +117,15 @@ username, email, and password.
 ### ● Kubernetes Services and Ingress:
 
 ```
-○ MySQL Service: Exposed the MySQL server on port 3306
+● MySQL Service: Exposed the MySQL server on port 3306
 with a ClusterIP service.
 ```
 ```
-○ PHP CRUD Service: Exposed the PHP CRUD application on
+● PHP CRUD Service: Exposed the PHP CRUD application on
 port 80 through a Kubernetes service.
 ```
 ```
-○ Ingress Configuration: An Ingress resource was set up
+● Ingress Configuration: An Ingress resource was set up
 using MetalLB as the load balancer to expose an
 external IP for the application. The Ingress resource
 was configured to route HTTP requests to the
@@ -146,8 +146,6 @@ id int(12) NOT NULL,
 username varchar(255) NOT NULL,
 email varchar(255) NOT NULL,
 password varchar(255) NOT NULL
-```
-```
 );
 ```
 ## Dockerfile for PHP CRUD Application
@@ -169,7 +167,7 @@ resource is as follows:
 
 ```
 rules:
-```
+
 - [http:](http:)
     paths:
     - path: /
@@ -179,14 +177,7 @@ rules:
              name: php-crud-service
              port:
                 number: 80
-
-## SSH Tunneling Command
-
-SSH -i login-key.pem -R 8181:localhost:80 ubuntu@32.64.126.
-
-This command forwards remote port 8181 to local port 80,
-allowing Nginx on the EC2 instance to communicate with the
-Kubernetes cluster.
+```
 
 ## Key Achievements:
 
